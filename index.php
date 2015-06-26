@@ -40,11 +40,21 @@
                         </div>
                         <div class="col-md-7 column">
                             <div class="row">
-                                <?php include 'product.php'; ?>
-                                <?php include 'product.php'; ?>
-                                <?php include 'product.php'; ?>
-                                <?php include 'product.php'; ?>
-                                <?php include 'product.php'; ?>
+                                <form method="POST" action="user_save.php">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">E-mail</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Senha</label>
+                                        <input type="password" class="form-control" id="password" placeholder="Senha">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Confirmar Senha</label>
+                                        <input type="password" class="form-control" id="password_confirm" placeholder="Confirmar Senha">
+                                    </div>
+                                    <button type="submit" id="btn-user-submit" class="btn btn-default">Cadastrar</button>
+                                </form>
 
 
                             </div>
@@ -108,6 +118,9 @@
                 username: 'gameofthrones',
                 overlay: true,
                 apikey: false
+            });
+            $('#btn-user-submit').click(function () {
+                btn - user - submit
             })
         </script>
     </body>
