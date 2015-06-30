@@ -1,3 +1,11 @@
+<?php
+require 'inc/common.php';
+session_start();
+
+//dd($_SESSION);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,46 +25,17 @@
 
     <body>
         <?php include('./header.php'); ?>
-        <div class="container">
+        <div class="container" style="padding-bottom: 20px">
             <?php include 'breadcrumb.php'; ?>
             <div class="row clearfix">
                 <div class="col-md-12 column">
                     <div class="row clearfix">
                         <div class="col-md-2 column">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li class="active">
-                                    <a href="#">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#">Produtos</a>
-                                </li>
-                                <li>
-                                    <a href="#">Sobre</a>
-                                </li>
-                                <li>
-                                    <a href="#">Contato</a>
-                                </li>
-                            </ul>
+                            <?php include 'inc/menu.php' ?>
                         </div>
                         <div class="col-md-7 column">
                             <div class="row">
-                                <form method="POST" action="user_save.php">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">E-mail</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Senha</label>
-                                        <input type="password" class="form-control" id="password" placeholder="Senha">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Confirmar Senha</label>
-                                        <input type="password" class="form-control" id="password_confirm" placeholder="Confirmar Senha">
-                                    </div>
-                                    <button type="submit" id="btn-user-submit" class="btn btn-default">Cadastrar</button>
-                                </form>
-
-
+                                <?php getBodyContent(); ?>
                             </div>
                         </div>
                         <div class="col-md-3 column">
@@ -112,16 +91,13 @@
         </div>
         <?php include ('footer.php'); ?>
         <script>
-            $('.demo').socialstream({
+            $('.insta').socialstream({
                 socialnetwork: 'instagram',
                 limit: 12,
                 username: 'gameofthrones',
                 overlay: true,
                 apikey: false
             });
-            $('#btn-user-submit').click(function () {
-                btn - user - submit
-            })
         </script>
     </body>
 </html>

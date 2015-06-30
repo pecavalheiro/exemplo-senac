@@ -21,7 +21,7 @@
                 <img src="img/mapa.jpg">
             </div>
             <div class="col-md-3 column">
-                <div class="social-feed demo">
+                <div class="social-feed insta">
                 </div>
 
             </div>
