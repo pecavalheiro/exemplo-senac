@@ -11,12 +11,11 @@
     <li class="<?php echo $_GET['p'] == 'contato' ? 'active' : '' ?>">
         <a href="./index.php?p=contato">Contato</a>
     </li>
-    <?php if ($_SESSION['user']['id']) { ?>
+    <?php if (!empty($_SESSION['user']['id'])) { ?>
         <li class="<?php echo $_GET['p'] == 'user-form' ? 'active' : '' ?>">
             <a href="./index.php?p=user-form">Gerenciar Usuários</a>
         </li>
-        <li class="<?php echo $_GET['p'] == 'product-list' ? 'active' : '' ?>">
-            <a href="./index.php?p=product-form">Gerenciar Produtos</a>
-        </li>
+        <li class="<?php echo $_GET['p'] == 'product-form' ? 'active' : '' ?>">
+            <a href="./index.php?p=product-form">Gerenciar Produtos</a>        </li>
     <?php } ?>
 </ul>

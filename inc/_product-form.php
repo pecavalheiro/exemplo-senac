@@ -1,4 +1,4 @@
-<form method="POST" action="../produc_save.php" enctype="multipart/form-data">
+<form method="POST" action="./product_save.php" enctype="multipart/form-data">
     <div class="form-group">
         <label>Nome</label>
         <input type="name" class="form-control" id="name" name="name" placeholder="Nome">

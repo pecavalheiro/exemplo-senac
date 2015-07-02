@@ -3,7 +3,6 @@ require 'inc/common.php';
 session_start();
 
 //dd($_SESSION);
-
 ?>
 
 <!DOCTYPE html>

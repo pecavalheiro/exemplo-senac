@@ -1,7 +1,7 @@
 <?php
-function getBodyContent()
-{
-    switch ($_GET['p']) {
+
+function getBodyContent() {
+    switch (@$_GET['p']) {
         case 'produtos':
             include 'inc/_product-list.php';
             break;
@@ -20,21 +20,18 @@ function getBodyContent()
             include 'inc/_product-form.php';
             break;
         default:
-            include 'product.php';
+//            include 'product.php';
     }
-
 }
 
-function dd($var)
-{
+function dd($var) {
     echo '<pre>';
     var_dump($var);
     echo '</pre>';
     exit;
-
 }
 
-function newDbConnection()
-{
-    return new mysqli('192.168.33.11', 'root', 'root', 'exemplo-senac');
+function newDbConnection() {
+    return new mysqli('127.0.0.1', 'root', '', 'exemplo-senac');
+//    return new mysqli('192.168.33.11', 'root', 'root', 'exemplo-senac');
 }

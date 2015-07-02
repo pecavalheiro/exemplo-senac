@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="col-md-2 column">
-            <?php if ($_SESSION['user']['id']) { ?>
+            <?php if (!empty($_SESSION['user']['id'])) { ?>
                 <h4>Bem vindo, <?php echo $_SESSION['user']['name'] ?>!</h4>
                 <a href="./logoff.php">Sair</a>
             <?php } else { ?>

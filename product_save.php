@@ -1,10 +1,13 @@
 <?php
-include('inc/common.php');
 
-if (!empty($_FILES['image'])) {
+include('inc/common.php');
+if (!empty($_FILES['image']['name'])) {
     $file_extension = explode('.', $_FILES['image']['name']);
     $file_extension = array_pop($file_extension);
     $new_filename = md5(time()) . '.' . $file_extension;
+//    echo '<pre>';
+//    var_dump($new_filename);
+//    exit;
     move_uploaded_file($_FILES['image']['tmp_name'], 'uploads/' . $new_filename);
 }
 $con = newDbConnection();
