@@ -23,3 +23,5 @@ CREATE TABLE `product` (
 ALTER TABLE `product` ADD INDEX (`fk_origin`)
   COMMENT '';
 ALTER TABLE `product` ADD CONSTRAINT `product_fk1` FOREIGN KEY (`fk_origin`) REFERENCES `origin` (`id`);
+
+ALTER TABLE `product` MODIFY COLUMN `price` DOUBLE(15, 2) DEFAULT NULL;

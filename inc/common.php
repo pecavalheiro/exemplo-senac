@@ -3,6 +3,7 @@ function getBodyContent()
 {
     switch ($_GET['p']) {
         case 'produtos':
+            include 'inc/_product-list.php';
             break;
         case 'sobre':
 
@@ -14,10 +15,9 @@ function getBodyContent()
             include 'inc/_user-form.php';
             break;
         case 'user-welcome':
-
             break;
-        case 'product-list':
-
+        case 'product-form':
+            include 'inc/_product-form.php';
             break;
         default:
             include 'product.php';
